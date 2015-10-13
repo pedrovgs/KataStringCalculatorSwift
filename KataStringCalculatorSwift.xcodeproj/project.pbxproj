@@ -28,6 +28,7 @@
 		EB74811B1BCDC77D00752EE4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		EB7481221BCDC96F00752EE4 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EB7481231BCDC9A700752EE4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EB7481251BCDCBE400752EE4 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 		EB74810F1BCDC77D00752EE4 = {
 			isa = PBXGroup;
 			children = (
+				EB7481251BCDCBE400752EE4 /* LICENSE.txt */,
 				EB7481231BCDC9A700752EE4 /* README.md */,
 				EB7481221BCDC96F00752EE4 /* .gitignore */,
 				EB74811A1BCDC77D00752EE4 /* KataStringCalculatorSwift */,
