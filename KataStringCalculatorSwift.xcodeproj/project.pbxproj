@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EB74811C1BCDC77D00752EE4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74811B1BCDC77D00752EE4 /* main.swift */; };
+		EB7481241BCDC9A700752EE4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EB7481231BCDC9A700752EE4 /* README.md */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,7 @@
 		EB7481181BCDC77D00752EE4 /* KataStringCalculatorSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KataStringCalculatorSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB74811B1BCDC77D00752EE4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		EB7481221BCDC96F00752EE4 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		EB7481231BCDC9A700752EE4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		EB74810F1BCDC77D00752EE4 = {
 			isa = PBXGroup;
 			children = (
+				EB7481231BCDC9A700752EE4 /* README.md */,
 				EB7481221BCDC96F00752EE4 /* .gitignore */,
 				EB74811A1BCDC77D00752EE4 /* KataStringCalculatorSwift */,
 				EB7481191BCDC77D00752EE4 /* Products */,
@@ -120,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7481241BCDC9A700752EE4 /* README.md in Sources */,
 				EB74811C1BCDC77D00752EE4 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
