@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  StringCalculator.swift
 //  KataStringCalculatorSwift
 //
 //  Created by Pedro Vicente on 14/10/15.
@@ -8,5 +8,9 @@
 
 import Foundation
 
-print("Welcome to the String Calculator Kata!")
-
+class StringCalculator {
+    
+    func add(numbers: String) -> Int {
+        return -1
+    }
+}

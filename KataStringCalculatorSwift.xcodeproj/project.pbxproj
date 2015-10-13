@@ -10,6 +10,8 @@
 		EB74811C1BCDC77D00752EE4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74811B1BCDC77D00752EE4 /* main.swift */; };
 		EB7481241BCDC9A700752EE4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EB7481231BCDC9A700752EE4 /* README.md */; settings = {ASSET_TAGS = (); }; };
 		EB74813A1BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7481391BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.swift */; };
+		EB7481461BCDD06700752EE4 /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7481451BCDD06700752EE4 /* StringCalculator.swift */; settings = {ASSET_TAGS = (); }; };
+		EB7481471BCDD09B00752EE4 /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7481451BCDD06700752EE4 /* StringCalculator.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,7 @@
 		EB7481371BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KataStringCalculatorSwiftUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7481391BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KataStringCalculatorSwiftUnitTests.swift; sourceTree = "<group>"; };
 		EB74813B1BCDCD2D00752EE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB7481451BCDD06700752EE4 /* StringCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				EB74811B1BCDC77D00752EE4 /* main.swift */,
+				EB7481451BCDD06700752EE4 /* StringCalculator.swift */,
 			);
 			path = KataStringCalculatorSwift;
 			sourceTree = "<group>";
@@ -180,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7481461BCDD06700752EE4 /* StringCalculator.swift in Sources */,
 				EB7481241BCDC9A700752EE4 /* README.md in Sources */,
 				EB74811C1BCDC77D00752EE4 /* main.swift in Sources */,
 			);
@@ -189,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7481471BCDD09B00752EE4 /* StringCalculator.swift in Sources */,
 				EB74813A1BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +347,7 @@
 				EB74813D1BCDCD2D00752EE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
