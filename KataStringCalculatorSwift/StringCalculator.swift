@@ -11,6 +11,6 @@ import Foundation
 class StringCalculator {
     
     func add(numbers: String) -> Int {
-        return -1
+        return 0
     }
 }
