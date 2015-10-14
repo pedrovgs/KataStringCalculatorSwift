@@ -13,24 +13,25 @@ String Calculator Kata implemented in Swift:
 
 1.4. Remember to refactor after each passing test.
 
-**2. Allow the ``add`` method to handle an unknown amount of numbers inside the string passed as.**
+**2. Allow the ``add`` method to handle an unknown amount of numbers inside the string passed as parameter.**
 
-**3. Allow the Add method to handle new lines between numbers (instead of commas).**
+**3. Allow the ``add`` method to handle new lines between numbers (instead of commas).**
 
-3.1. the following input is ok:  “1\n2,3”  (will equal 6)
-3.2. the following input is NOT ok:  “1,\n” (not need to prove it - just clarifying)
+3.1. The following input is ok:  “1\n2,3”  (will equal 6)
+
+3.2. The following input is NOT ok:  “1,\n” (not need to prove it - just clarifying)
 
 **4. Support different delimiters.**
 
-4.1. to change a delimiter, the beginning of the string will contain a separate line that looks like this:   “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .
+4.1. To change a delimiter, the beginning of the string will contain a separate line that looks like this:   “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .
 4.2. the first line is optional. all existing scenarios should still be supported
 
-**5. Calling ``add`` with a negative number will throw an exception ``negatives not allowed``, and ``the negative that numers passed``. If there are multiple negatives, show all of them in the exception message**
+**5. Calling ``add`` with a negative number will throw an exception negatives not allowed, and the negative that numers passed. If there are multiple negatives, show all of them in the exception message**
 
 
 **6. Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2**
 
-**7. Delimiters can be of any length with the following format:  “//[delimiter]\n” for example: “//[***]\n1***2***3” should return 6**
+**7. Delimiters can be of any length with the following format:  “//[delimiter]\n” for example: “//[***]\n1,.2~.-3” should return 6**
 
 **8. Allow multiple delimiters like this:  “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6.**
 
