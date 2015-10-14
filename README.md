@@ -5,33 +5,33 @@ String Calculator Kata implemented in Swift:
 
 **1. Create a simple String calculator with a method ``add(numbers: String) -> Int``.**
 
-1.1. The method can take 0, 1 or 2 numbers inside the input string, and will return their sum (for an empty string it will return 0. An example could be “” or “1” or “1,2”.
+* The method can take 0, 1 or 2 numbers inside the input string, and will return their sum (for an empty string it will return 0. An example could be “” or “1” or “1,2”.
 
-1.2. Start with the simplest test case of an empty string and move to 1 and two numbers.
+* Start with the simplest test case of an empty string and move to 1 and two numbers.
 
-1.3. Remember to solve things as simply as possible so that you force yourself to write tests you did not think about.
+* Remember to solve things as simply as possible so that you force yourself to write tests you did not think about.
 
-1.4. Remember to refactor after each passing test.
+* Remember to refactor after each passing test.
 
 **2. Allow the ``add`` method to handle an unknown amount of numbers inside the string passed as parameter.**
 
 **3. Allow the ``add`` method to handle new lines between numbers (instead of commas).**
 
-3.1. The following input is ok:  “1\n2,3”  (will equal 6)
+* The following input is ok:  “1\n2,3”  (will equal 6)
 
-3.2. The following input is NOT ok:  “1,\n” (not need to prove it - just clarifying)
+* The following input is NOT ok:  “1,\n” (not need to prove it - just clarifying)
 
 **4. Support different delimiters.**
 
-4.1. To change a delimiter, the beginning of the string will contain a separate line that looks like this:   “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .
-4.2. the first line is optional. all existing scenarios should still be supported
+* To change a delimiter, the beginning of the string will contain a separate line that looks like this:   “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .
+* the first line is optional. all existing scenarios should still be supported
 
 **5. Calling ``add`` with a negative number will throw an exception negatives not allowed, and the negative that numers passed. If there are multiple negatives, show all of them in the exception message**
 
 
 **6. Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2**
 
-**7. Delimiters can be of any length with the following format:  “//[delimiter]\n” for example: “//[***]\n1,.2~.-3” should return 6**
+**7. Delimiters can be of any length with the following format:  “//[delimiter]\n” for example: “//[~.-]\n1,.2[~.-]3” should return 6**
 
 **8. Allow multiple delimiters like this:  “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6.**
 
