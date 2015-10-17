@@ -29,9 +29,9 @@ extension String {
 
 extension Int {
     
-    func countDigits() -> Int {
-        var n = self
-        var sum = 0
+    func countChars() -> Int {
+        var sum = self < 0 ? 1 : 0
+        var n = abs(self)
         while n > 0 {
             sum++
             n /= 10

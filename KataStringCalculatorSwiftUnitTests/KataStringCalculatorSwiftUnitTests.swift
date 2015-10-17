@@ -74,13 +74,25 @@ class KataStringCalculatorSwiftUnitTests: XCTestCase {
         XCTAssertEqual(6, sum)
     }
     
-    func testShouldShowExceptionIfTheInputContainsOneNegativeNumber() {
+    func testShouldThrowExceptionIfTheInputContainsOneNegativeNumber() {
         let stringCalculator = givenAStringCalculator()
         
         do {
             try stringCalculator.add("1,2,-3")
         } catch InvalidInputError.NegativeNumbersFound(let negativeNumbers) {
             XCTAssertEqual(negativeNumbers, [-3])
+        } catch {
+            
+        }
+    }
+    
+    func testShouldThrowExceptionIfInputContaisSomeNegativeNumbers() {
+        let stringCalculator = givenAStringCalculator()
+        
+        do {
+            try stringCalculator.add("-1,2,-3")
+        } catch InvalidInputError.NegativeNumbersFound(let negativeNumbers) {
+            XCTAssertEqual(negativeNumbers, [-1,-3])
         } catch {
             
         }
