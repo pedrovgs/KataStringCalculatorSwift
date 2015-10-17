@@ -40,10 +40,9 @@ class NumberExtractor {
     }
     
     private func isFirstCharADelimiter(input: String) -> Bool {
-        if input.containsString(",") {
-            return input[input.startIndex] == ","
-        } else if input.containsString("\n") {
-            return input[input.startIndex] == "\n"
+        let delimiter = getNextDelimiter(input)
+        if input.containsString(delimiter) {
+            return String(input[input.startIndex]) == delimiter
         } else {
             return false
         }
@@ -51,13 +50,21 @@ class NumberExtractor {
     }
 
     private func getNextDelimiterIndex(input: String) -> Range<String.CharacterView.Index>? {
-        if input.containsString(",") {
-            return input.rangeOfString(",")
-        } else if input.containsString("\n") {
-            return input.rangeOfString("\n")
+        let delimiter = getNextDelimiter(input)
+        if input.containsString(delimiter) {
+            return input.rangeOfString(delimiter)
         } else {
             return nil
         }
+    }
+
+    private func getNextDelimiter(input: String) -> String {
+        for char in input.characters {
+            if char == "," || char == "\n" {
+                return String(char)
+            }
+        }
+        return ""
     }
     
 }
