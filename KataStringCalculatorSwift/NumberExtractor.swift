@@ -25,8 +25,8 @@ class NumberExtractor {
     }
     
     private func extractCurrentNumber(input: String) -> Int {
-        if input.containsString(",") {
-            let nextDelimiterIndex = input.rangeOfString(",")
+        if containsDelimiter(input) {
+            let nextDelimiterIndex = getNextDelimiterIndex(input)
             let stringNumber = input.substringToIndex(nextDelimiterIndex!.endIndex.predecessor())
             return Int(stringNumber)!
         } else {
@@ -36,11 +36,28 @@ class NumberExtractor {
     }
     
     private func containsDelimiter(input: String) -> Bool {
-        return input.containsString(",")
+        return input.containsString(",") || input.containsString("\n")
     }
     
     private func isFirstCharADelimiter(input: String) -> Bool {
-        return input[input.startIndex] == ","
+        if input.containsString(",") {
+            return input[input.startIndex] == ","
+        } else if input.containsString("\n") {
+            return input[input.startIndex] == "\n"
+        } else {
+            return false
+        }
+
+    }
+
+    private func getNextDelimiterIndex(input: String) -> Range<String.CharacterView.Index>? {
+        if input.containsString(",") {
+            return input.rangeOfString(",")
+        } else if input.containsString("\n") {
+            return input.rangeOfString("\n")
+        } else {
+            return nil
+        }
     }
     
 }

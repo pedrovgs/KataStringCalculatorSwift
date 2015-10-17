@@ -58,6 +58,14 @@ class KataStringCalculatorSwiftUnitTests: XCTestCase {
         XCTAssertEqual(12, sum)
     }
     
+    func testShouldSupportNewLineDelimiterInsteadOfComas() {
+        let stringCalculator = givenAStringCalculator()
+
+        let sum = stringCalculator.add("1\n2\n3")
+
+        XCTAssertEqual(6, sum)
+    }
+
     private func givenAStringCalculator() -> StringCalculator {
         let numberExtractor = NumberExtractor()
         return StringCalculator(numberExtractor: numberExtractor)
