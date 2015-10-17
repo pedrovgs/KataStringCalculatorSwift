@@ -12,6 +12,8 @@
 		EB74813A1BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7481391BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.swift */; };
 		EB7481461BCDD06700752EE4 /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7481451BCDD06700752EE4 /* StringCalculator.swift */; settings = {ASSET_TAGS = (); }; };
 		EB7481471BCDD09B00752EE4 /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7481451BCDD06700752EE4 /* StringCalculator.swift */; settings = {ASSET_TAGS = (); }; };
+		EBE92E0C1BD240040059671E /* NumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE92E0B1BD240040059671E /* NumberExtractor.swift */; settings = {ASSET_TAGS = (); }; };
+		EBE92E0D1BD240040059671E /* NumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE92E0B1BD240040059671E /* NumberExtractor.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +39,7 @@
 		EB7481391BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KataStringCalculatorSwiftUnitTests.swift; sourceTree = "<group>"; };
 		EB74813B1BCDCD2D00752EE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB7481451BCDD06700752EE4 /* StringCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCalculator.swift; sourceTree = "<group>"; };
+		EBE92E0B1BD240040059671E /* NumberExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,7 @@
 			children = (
 				EB74811B1BCDC77D00752EE4 /* main.swift */,
 				EB7481451BCDD06700752EE4 /* StringCalculator.swift */,
+				EBE92E0B1BD240040059671E /* NumberExtractor.swift */,
 			);
 			path = KataStringCalculatorSwift;
 			sourceTree = "<group>";
@@ -185,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB7481461BCDD06700752EE4 /* StringCalculator.swift in Sources */,
+				EBE92E0C1BD240040059671E /* NumberExtractor.swift in Sources */,
 				EB7481241BCDC9A700752EE4 /* README.md in Sources */,
 				EB74811C1BCDC77D00752EE4 /* main.swift in Sources */,
 			);
@@ -196,6 +201,7 @@
 			files = (
 				EB7481471BCDD09B00752EE4 /* StringCalculator.swift in Sources */,
 				EB74813A1BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.swift in Sources */,
+				EBE92E0D1BD240040059671E /* NumberExtractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

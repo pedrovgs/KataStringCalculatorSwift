@@ -10,11 +10,24 @@ import Foundation
 
 class StringCalculator {
     
-    func add(numbers: String) -> Int {
-        if numbers.isEmpty {
-            return 0
-        }else {
-            return Int(numbers)!
-        }
+    private let numberExtractor: NumberExtractor
+    
+    init(numberExtractor: NumberExtractor) {
+        self.numberExtractor = numberExtractor
+    }
+    
+    func add(input: String) -> Int {
+        let numbers = extractNumbers(input)
+        return sumNumbers(numbers)
+    }
+    
+    private func extractNumbers(input: String) -> [Int] {
+        return numberExtractor.extract(input)
+    }
+    
+    private func sumNumbers(numbers: [Int]) -> Int {
+        return numbers.reduce(0, combine: { (accumulator, element) in
+            return accumulator + element
+        })
     }
 }

@@ -34,8 +34,17 @@ class KataStringCalculatorSwiftUnitTests: XCTestCase {
         XCTAssertEqual(11, sum)
     }
     
+    func testShouldReturnTheSumOfTwoNumbersSeparatedByComa() {
+        let stringCalculator = givenAStringCalculator()
+        
+        let sum = stringCalculator.add("1,2")
+        
+        XCTAssertEqual(3, sum)
+    }
+    
     private func givenAStringCalculator() -> StringCalculator {
-        return StringCalculator()
+        let numberExtractor = NumberExtractor()
+        return StringCalculator(numberExtractor: numberExtractor)
     }
     
 }
