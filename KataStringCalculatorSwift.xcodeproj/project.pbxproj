@@ -91,7 +91,7 @@
 		EB74811A1BCDC77D00752EE4 /* KataStringCalculatorSwift */ = {
 			isa = PBXGroup;
 			children = (
-				EBAEF1761BD25D8700CE6787 /* Exceptions */,
+				EBAEF1761BD25D8700CE6787 /* Errors */,
 				EBAEF1721BD24C6D00CE6787 /* Extensions */,
 				EB74811B1BCDC77D00752EE4 /* main.swift */,
 				EB7481451BCDD06700752EE4 /* StringCalculator.swift */,
@@ -117,12 +117,12 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		EBAEF1761BD25D8700CE6787 /* Exceptions */ = {
+		EBAEF1761BD25D8700CE6787 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
 				EBAEF1771BD25DB800CE6787 /* InvalidInputError.swift */,
 			);
-			name = Exceptions;
+			name = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
