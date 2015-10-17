@@ -1,4 +1,4 @@
-String Calculator
+String Calculator [![Build Status](https://travis-ci.org/pedrovgs/KataStringCalculatorSwift.svg branch=master)](https://travis-ci.org/pedrovgs/KataStringCalculatorSwift)
 =================
 
 String Calculator Kata implemented in Swift:
