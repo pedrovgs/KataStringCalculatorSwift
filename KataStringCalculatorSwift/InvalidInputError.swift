@@ -11,5 +11,6 @@ import Foundation
 enum InvalidInputError: ErrorType {
 
     case NegativeNumbersFound(numbers: [Int])
+    case InvalidDelimiterFound(delimiter: String)
 
 }
