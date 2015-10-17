@@ -21,21 +21,25 @@ String Calculator Kata implemented in Swift:
 
 * The following input is NOT ok:  “1,\n” (not need to prove it - just clarifying)
 
-**4. Support different delimiters.**
+**4. If a delimiter different of "," or "\n" is used, throw an exception.
+
+** END OF THE FIRST PART OF THIS KATA ** 
+
+**5. Support different delimiters.**
 
 * To change a delimiter, the beginning of the string will contain a separate line that looks like this:   “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .
 * the first line is optional. all existing scenarios should still be supported
 
-**5. Calling ``add`` with a negative number will throw an exception negatives not allowed, and the negative that numers passed. If there are multiple negatives, show all of them in the exception message**
+**6. Calling ``add`` with a negative number will throw an exception negatives not allowed, and the negative that numers passed. If there are multiple negatives, show all of them in the exception message**
 
 
-**6. Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2**
+**7. Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2**
 
-**7. Delimiters can be of any length with the following format:  “//[delimiter]\n” for example: “//[~.-]\n1,.2[~.-]3” should return 6**
+**8. Delimiters can be of any length with the following format:  “//[delimiter]\n” for example: “//[~.-]\n1,.2[~.-]3” should return 6**
 
-**8. Allow multiple delimiters like this:  “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6.**
+**9. Allow multiple delimiters like this:  “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6.**
 
-**9. Make sure you can also handle multiple delimiters with length longer than one char.**
+**10. Make sure you can also handle multiple delimiters with length longer than one char.**
 
 
 Developed By
@@ -55,7 +59,7 @@ Developed By
 License
 -------
 
-Copyright 2014 Pedro Vicente Gómez Sánchez
+Copyright 2015 Pedro Vicente Gómez Sánchez
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
