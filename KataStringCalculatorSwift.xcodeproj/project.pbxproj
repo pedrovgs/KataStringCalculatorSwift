@@ -12,6 +12,8 @@
 		EB74813A1BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7481391BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.swift */; };
 		EB7481461BCDD06700752EE4 /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7481451BCDD06700752EE4 /* StringCalculator.swift */; settings = {ASSET_TAGS = (); }; };
 		EB7481471BCDD09B00752EE4 /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7481451BCDD06700752EE4 /* StringCalculator.swift */; settings = {ASSET_TAGS = (); }; };
+		EBAEF1741BD24C7B00CE6787 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEF1731BD24C7B00CE6787 /* extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		EBAEF1751BD24CE500CE6787 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEF1731BD24C7B00CE6787 /* extensions.swift */; settings = {ASSET_TAGS = (); }; };
 		EBE92E0C1BD240040059671E /* NumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE92E0B1BD240040059671E /* NumberExtractor.swift */; settings = {ASSET_TAGS = (); }; };
 		EBE92E0D1BD240040059671E /* NumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE92E0B1BD240040059671E /* NumberExtractor.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -39,6 +41,7 @@
 		EB7481391BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KataStringCalculatorSwiftUnitTests.swift; sourceTree = "<group>"; };
 		EB74813B1BCDCD2D00752EE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB7481451BCDD06700752EE4 /* StringCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCalculator.swift; sourceTree = "<group>"; };
+		EBAEF1731BD24C7B00CE6787 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		EBE92E0B1BD240040059671E /* NumberExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +88,7 @@
 		EB74811A1BCDC77D00752EE4 /* KataStringCalculatorSwift */ = {
 			isa = PBXGroup;
 			children = (
+				EBAEF1721BD24C6D00CE6787 /* Extensions */,
 				EB74811B1BCDC77D00752EE4 /* main.swift */,
 				EB7481451BCDD06700752EE4 /* StringCalculator.swift */,
 				EBE92E0B1BD240040059671E /* NumberExtractor.swift */,
@@ -99,6 +103,14 @@
 				EB74813B1BCDCD2D00752EE4 /* Info.plist */,
 			);
 			path = KataStringCalculatorSwiftUnitTests;
+			sourceTree = "<group>";
+		};
+		EBAEF1721BD24C6D00CE6787 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBAEF1731BD24C7B00CE6787 /* extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBAEF1741BD24C7B00CE6787 /* extensions.swift in Sources */,
 				EB7481461BCDD06700752EE4 /* StringCalculator.swift in Sources */,
 				EBE92E0C1BD240040059671E /* NumberExtractor.swift in Sources */,
 				EB7481241BCDC9A700752EE4 /* README.md in Sources */,
@@ -202,6 +215,7 @@
 				EB7481471BCDD09B00752EE4 /* StringCalculator.swift in Sources */,
 				EB74813A1BCDCD2D00752EE4 /* KataStringCalculatorSwiftUnitTests.swift in Sources */,
 				EBE92E0D1BD240040059671E /* NumberExtractor.swift in Sources */,
+				EBAEF1751BD24CE500CE6787 /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
