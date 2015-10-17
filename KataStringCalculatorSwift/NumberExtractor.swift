@@ -17,7 +17,9 @@ class NumberExtractor {
             return extract(input[1..<input.countChars()])
         } else if containsDelimiter(input) {
             let currentNumber = extractCurrentNumber(input)
-            let restOfNumbers = extract(input[currentNumber.countDigits()...input.countChars()])
+            let restOfNumbersStartIndex = currentNumber.countDigits()
+            let restOfNumberEndIndex = input.countChars()
+            let restOfNumbers = extract(input[restOfNumbersStartIndex...restOfNumberEndIndex])
             return [currentNumber] + restOfNumbers
         } else {
             return [extractCurrentNumber(input)]
