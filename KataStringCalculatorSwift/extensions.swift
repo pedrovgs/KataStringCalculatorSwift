@@ -25,10 +25,22 @@ extension String {
     func countChars() -> Int {
         return characters.count
     }
+
+}
+
+extension Character {
+
+    func isDigit() -> Bool {
+        let string = String(self).unicodeScalars
+        let uni = string[string.startIndex]
+        let digits = NSCharacterSet.decimalDigitCharacterSet()
+        return digits.longCharacterIsMember(uni.value)
+    }
+
 }
 
 extension Int {
-    
+
     func countChars() -> Int {
         var sum = self < 0 ? 1 : 0
         var n = abs(self)

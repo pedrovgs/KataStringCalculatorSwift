@@ -10,16 +10,18 @@ import Foundation
 
 class NumberExtractor {
     
-    func extract(input: String) -> [Int] {
+    func extract(input: String) throws -> [Int] {
         if input.isEmpty {
             return []
+        } else if !isFirstCharAValidChar(input) {
+            throw InvalidInputError.InvalidDelimiterFound(delimiter: String(input[0]))
         } else if isFirstCharADelimiter(input) {
-            return extract(input[1..<input.countChars()])
+            return try extract(input[1..<input.countChars()])
         } else if containsDelimiter(input) {
             let currentNumber = extractCurrentNumber(input)
             let restOfNumbersStartIndex = currentNumber.countChars()
             let restOfNumberEndIndex = input.countChars()
-            let restOfNumbers = extract(input[restOfNumbersStartIndex...restOfNumberEndIndex])
+            let restOfNumbers = try extract(input[restOfNumbersStartIndex...restOfNumberEndIndex])
             return [currentNumber] + restOfNumbers
         } else {
             return [extractCurrentNumber(input)]
@@ -38,7 +40,9 @@ class NumberExtractor {
     }
     
     private func containsDelimiter(input: String) -> Bool {
-        return input.containsString(",") || input.containsString("\n")
+        return input.characters.filter({ (character) -> Bool in
+            !character.isDigit() && character != "-"
+        }).count > 0
     }
     
     private func isFirstCharADelimiter(input: String) -> Bool {
@@ -62,11 +66,16 @@ class NumberExtractor {
 
     private func getNextDelimiter(input: String) -> String {
         for char in input.characters {
-            if char == "," || char == "\n" {
+            if !char.isDigit() && char != "-" {
                 return String(char)
             }
         }
         return ""
     }
     
+    private func isFirstCharAValidChar(input: String) -> Bool {
+        let char = input[0]
+        return char == "," || char ==  "\n" || char == "-" || char.isDigit()
+    }
+
 }

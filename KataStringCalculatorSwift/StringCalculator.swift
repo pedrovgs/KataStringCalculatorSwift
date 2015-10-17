@@ -17,13 +17,13 @@ class StringCalculator {
     }
     
     func add(input: String) throws -> Int  {
-        let numbers = extractNumbers(input)
+        let numbers = try extractNumbers(input)
         try validateNumbers(numbers)
         return sumNumbers(numbers)
     }
     
-    private func extractNumbers(input: String) -> [Int] {
-        return numberExtractor.extract(input)
+    private func extractNumbers(input: String) throws  -> [Int] {
+        return try numberExtractor.extract(input)
     }
     
     private func validateNumbers(numbers: [Int]) throws {
