@@ -18,6 +18,14 @@ class KataStringCalculatorSwiftUnitTests: XCTestCase {
         XCTAssertEqual(0, sum)
     }
     
+    func testShouldReturnTheContentOfTheStringIfTheInputContainsJustOneNumber() {
+        let stringCalculator = givenAStringCalculator()
+        
+        let sum = stringCalculator.add("1")
+        
+        XCTAssertEqual(1, sum)
+    }
+    
     private func givenAStringCalculator() -> StringCalculator {
         return StringCalculator()
     }

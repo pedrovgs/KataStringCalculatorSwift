@@ -11,6 +11,10 @@ import Foundation
 class StringCalculator {
     
     func add(numbers: String) -> Int {
-        return 0
+        if numbers.isEmpty {
+            return 0
+        }else {
+            return Int(numbers)!
+        }
     }
 }
