@@ -13,7 +13,7 @@ class KataStringCalculatorSwiftUnitTests: XCTestCase {
     func testShouldReturnZeroIfTheStringIsEmpty() {
         let stringCalculator = givenAStringCalculator()
         
-        let sum = stringCalculator.add("")
+        let sum = try! stringCalculator.add("")
         
         XCTAssertEqual(0, sum)
     }
@@ -21,7 +21,7 @@ class KataStringCalculatorSwiftUnitTests: XCTestCase {
     func testShouldReturnTheContentOfTheStringIfTheInputContainsJustOneNumber() {
         let stringCalculator = givenAStringCalculator()
         
-        let sum = stringCalculator.add("1")
+        let sum = try! stringCalculator.add("1")
         
         XCTAssertEqual(1, sum)
     }
@@ -29,7 +29,7 @@ class KataStringCalculatorSwiftUnitTests: XCTestCase {
     func testShouldReturnTheContentOfTheStringIfTheInputContainsJustOneNumberWithMoreThanOneDigit() {
         let stringCalculator = givenAStringCalculator()
         
-        let sum = stringCalculator.add("11")
+        let sum = try! stringCalculator.add("11")
         
         XCTAssertEqual(11, sum)
     }
@@ -37,7 +37,7 @@ class KataStringCalculatorSwiftUnitTests: XCTestCase {
     func testShouldReturnTheSumOfTwoNumbersSeparatedByComas() {
         let stringCalculator = givenAStringCalculator()
         
-        let sum = stringCalculator.add("1,2")
+        let sum = try! stringCalculator.add("1,2")
         
         XCTAssertEqual(3, sum)
     }
@@ -45,7 +45,7 @@ class KataStringCalculatorSwiftUnitTests: XCTestCase {
     func testShouldReturnTheSumOfThreeNumbersSeparatedByComas() {
         let stringCalculator = givenAStringCalculator()
         
-        let sum = stringCalculator.add("1,2,3")
+        let sum = try! stringCalculator.add("1,2,3")
         
         XCTAssertEqual(6, sum)
     }
@@ -53,7 +53,7 @@ class KataStringCalculatorSwiftUnitTests: XCTestCase {
     func testShouldReturnTheSumOfAnUnkownAmountOfNumbersSeparatedByComas() {
         let stringCalculator = givenAStringCalculator()
         
-        let sum = stringCalculator.add("1,2,3,1,2,3")
+        let sum = try! stringCalculator.add("1,2,3,1,2,3")
         
         XCTAssertEqual(12, sum)
     }
@@ -61,7 +61,7 @@ class KataStringCalculatorSwiftUnitTests: XCTestCase {
     func testShouldSupportNewLineDelimiterInsteadOfComas() {
         let stringCalculator = givenAStringCalculator()
 
-        let sum = stringCalculator.add("1\n2\n3")
+        let sum = try! stringCalculator.add("1\n2\n3")
 
         XCTAssertEqual(6, sum)
     }
@@ -69,9 +69,21 @@ class KataStringCalculatorSwiftUnitTests: XCTestCase {
     func testShouldSupportNewLineAndComasAsDelimitersInTheSameInput() {
         let stringCalculator = givenAStringCalculator()
         
-        let sum = stringCalculator.add("1\n2,3")
+        let sum = try! stringCalculator.add("1\n2,3")
         
         XCTAssertEqual(6, sum)
+    }
+    
+    func testShouldShowExceptionIfTheInputContainsOneNegativeNumber() {
+        let stringCalculator = givenAStringCalculator()
+        
+        do {
+            try stringCalculator.add("1,2,-3")
+        } catch InvalidInputError.NegativeNumbersFound(let negativeNumbers) {
+            XCTAssertEqual(negativeNumbers, [-3])
+        } catch {
+            
+        }
     }
 
     private func givenAStringCalculator() -> StringCalculator {

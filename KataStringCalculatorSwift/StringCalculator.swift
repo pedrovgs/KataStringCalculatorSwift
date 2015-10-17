@@ -16,7 +16,7 @@ class StringCalculator {
         self.numberExtractor = numberExtractor
     }
     
-    func add(input: String) -> Int {
+    func add(input: String) throws -> Int  {
         let numbers = extractNumbers(input)
         return sumNumbers(numbers)
     }
