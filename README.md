@@ -23,7 +23,7 @@ String Calculator Kata implemented in Swift:
 
 **4. If a delimiter different of "," or "\n" is used, throw an exception.
 
-**END OF THE FIRST PART OF THIS KATA** 
+***END OF THE FIRST PART OF THIS KATA***
 
 **5. Support different delimiters.**
 
